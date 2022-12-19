@@ -1,0 +1,191 @@
+@import "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css";
+
+header {
+  z-index: 1000;
+}
+footer {
+  margin-top: 0;
+}
+#loc {
+  position: relative;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.brand_content {
+  position: relative;
+  z-index: 3000;
+}
+.brand_content .image {
+  width: 100%;
+}
+.subcontent {
+  height: 2000px;
+}
+.subcontent2 {
+  height: 1000px;
+}
+.subcontent3 {
+  height: 2000px;
+}
+.parallax_scroll {
+  position: relative;
+  height: 3600px;
+  z-index: 200;
+  /* background-color: #ececec; */
+  overflow: hidden;
+}
+.parallax {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+.parallax .parallax-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.visual-slogan {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 1000;
+}
+.visual-slogan .txt {
+  display: block;
+  font-family: Pretendard;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 140%;
+}
+.visual-slogan .txt:first-child {
+  letter-spacing: 0.02em;
+}
+.visual-full-logo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.visual-full-logo .full-logo {
+  width: 720px;
+  height: 601px;
+  animation-name: logo;
+  animation-duration: 3s;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+  background-image: url("../img/cube/logo-full.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+}
+.visual-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  opacity: 0;
+}
+.visual-logo .simbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 396px;
+  height: 396px;
+  background-image: url("../img/cube/logo-simbol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 396px;
+  height: 396px;
+  transform: translate(-50%, -50%);
+}
+.visual .visual-container {
+  position: absolute;
+  top: 97px;
+  z-index: 100;
+}
+.visual .visual-action {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.visual .visual-action[data-depth="0"] {
+  z-index: 100;
+}
+.visual .visual-action[data-depth="1"] {
+  top: -32px;
+  left: 32px;
+  z-index: 90;
+}
+.visual .visual-action[data-depth="2"] {
+  top: -64px;
+  left: 64px;
+  z-index: 80;
+}
+.visual .visual-action[data-depth="3"] {
+  top: -96px;
+  left: 96px;
+  z-index: 70;
+}
+.visual .visual-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visual .visual-box[data-cube="1"] {
+  background-image: url("../img/cube/cube-01.png");
+}
+.visual .visual-box[data-cube="2"] {
+  background-image: url("../img/cube/cube-02.png");
+}
+.visual .visual-box[data-cube="3"] {
+  background-image: url("../img/cube/cube-03.png");
+}
+.visual .visual-box[data-cube="4"] {
+  background-image: url("../img/cube/cube-04.png");
+}
+.visual .visual-box[data-cube="5"] {
+  background-image: url("../img/cube/cube-05.png");
+}
+.visual .visual-box[data-cube="6"] {
+  background-image: url("../img/cube/cube-06.png");
+}
+.visual .visual-box[data-cube="7"] {
+  background-image: url("../img/cube/cube-07.png");
+}
+.visual .visual-box[data-cube="8"] {
+  background-image: url("../img/cube/cube-08.png");
+}
+.visual .visual-box[data-cube="9"] {
+  background-image: url("../img/cube/cube-09.png");
+}
+.visual .visual-box[data-cube="10"] {
+  background-image: url("../img/cube/cube-10.png");
+}
+.visual .visual-box[data-cube="11"] {
+  background-image: url("../img/cube/cube-11.png");
+}
+.visual .move .visual-box {
+  transition: all 2.4s cubic-bezier(0.06, 0.72, 0.41, 0.98);
+  transform: translate(0) !important;
+}

@@ -1,0 +1,408 @@
+@import "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css";
+
+.cube_visual {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.introVisual {
+  position: static;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  overflow: hidden;
+}
+.visual-slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #221613;
+  animation-name: slogan;
+  animation-duration: 5s;
+  animation-delay: 5.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.visual-slogan .txt {
+  display: block;
+  font-family: Pretendard;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 140%;
+}
+.visual-slogan .txt:first-child {
+  letter-spacing: 0.02em;
+}
+.full-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 720px;
+  height: 601px;
+  animation-name: logo;
+  animation-duration: 3s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+  background-image: url("../img/cube/logo-full.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 396px;
+  height: 396px;
+  transform: translate(-50%, -50%);
+}
+.visual .visual-container {
+  position: absolute;
+  top: 97px;
+  z-index: 100;
+  animation-name: cubes;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.visual .visual-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  animation-name: simbol;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.visual .visual-logo .simbol {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/cube/logo-simbol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visual .visual-action {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.visual .visual-action[data-depth="0"] {
+  z-index: 100;
+}
+.visual .visual-action[data-depth="1"] {
+  top: -32px;
+  left: 32px;
+  z-index: 90;
+}
+.visual .visual-action[data-depth="2"] {
+  top: -64px;
+  left: 64px;
+  z-index: 80;
+}
+.visual .visual-action[data-depth="3"] {
+  top: -96px;
+  left: 96px;
+  z-index: 70;
+}
+.visual .visual-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visual .visual-box[data-cube="1"] {
+  background-image: url("../img/cube/cube-01.png");
+}
+.visual .visual-box[data-cube="2"] {
+  background-image: url("../img/cube/cube-02.png");
+}
+.visual .visual-box[data-cube="3"] {
+  background-image: url("../img/cube/cube-03.png");
+}
+.visual .visual-box[data-cube="4"] {
+  background-image: url("../img/cube/cube-04.png");
+}
+.visual .visual-box[data-cube="5"] {
+  background-image: url("../img/cube/cube-05.png");
+}
+.visual .visual-box[data-cube="6"] {
+  background-image: url("../img/cube/cube-06.png");
+}
+.visual .visual-box[data-cube="7"] {
+  background-image: url("../img/cube/cube-07.png");
+}
+.visual .visual-box[data-cube="8"] {
+  background-image: url("../img/cube/cube-08.png");
+}
+.visual .visual-box[data-cube="9"] {
+  background-image: url("../img/cube/cube-09.png");
+}
+.visual .visual-box[data-cube="10"] {
+  background-image: url("../img/cube/cube-10.png");
+}
+.visual .visual-box[data-cube="11"] {
+  background-image: url("../img/cube/cube-11.png");
+}
+@keyframes cubes {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes simbol {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+@keyframes slogan {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.visual [data-depth="0"] .visual-box:nth-child(1) {
+  transform: translate(-800px, -1000px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(2) {
+  transform: translate(-1200px, 400px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(3) {
+  transform: translate(-1700px, -200px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(4) {
+  transform: translate(900px, -800px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(5) {
+  transform: translate(1700px, -100px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(6) {
+  transform: translate(1900px, 800px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(7) {
+  transform: translate(1300px, 1200px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(8) {
+  transform: translate(-800px, 1300px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(9) {
+  transform: translate(-1000px, 500px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(10) {
+  transform: translate(1000px, -1500px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(11) {
+  transform: translate(2000px, 1000px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(12) {
+  transform: translate(100px, 500px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(13) {
+  transform: translate(-300px, 500px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(14) {
+  transform: translate(-200px, 300px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(15) {
+  transform: translate(400px, 700px);
+}
+.visual [data-depth="0"] .visual-box:nth-child(16) {
+  transform: translate(1200px, 2000px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(1) {
+  transform: translate(-234px, -905px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(2) {
+  transform: translate(-1800px, -1000px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(3) {
+  transform: translate(-908px, 900px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(4) {
+  transform: translate(1673px, -1235px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(5) {
+  transform: translate(-600px, -309px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(6) {
+  transform: translate(-1298px, 1800px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(7) {
+  transform: translate(2000px, -3000px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(8) {
+  transform: translate(-800px, 3200px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(9) {
+  transform: translate(2900px, 800px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(10) {
+  transform: translate(-3200px, -1500px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(11) {
+  transform: translate(-2900px, 800px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(12) {
+  transform: translate(3900px, -892px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(13) {
+  transform: translate(-1200px, 3200px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(14) {
+  transform: translate(-2900px, 1300px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(15) {
+  transform: translate(1400px, 700px);
+}
+.visual [data-depth="1"] .visual-box:nth-child(16) {
+  transform: translate(-1200px, 400px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(1) {
+  transform: translate(2234px, -905px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(2) {
+  transform: translate(1800px, 1000px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(3) {
+  transform: translate(-508px, 1200px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(4) {
+  transform: translate(2673px, -1235px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(5) {
+  transform: translate(200px, -3009px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(6) {
+  transform: translate(-598px, -1800px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(7) {
+  transform: translate(1000px, -945px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(8) {
+  transform: translate(-3200px, 900px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(9) {
+  transform: translate(-290px, 800px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(10) {
+  transform: translate(-4200px, -1900px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(11) {
+  transform: translate(-3000px, 1800px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(12) {
+  transform: translate(900px, -492px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(13) {
+  transform: translate(-900px, 2300px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(14) {
+  transform: translate(-4900px, 2000px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(15) {
+  transform: translate(400px, 700px);
+}
+.visual [data-depth="2"] .visual-box:nth-child(16) {
+  transform: translate(-200px, 1200px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(1) {
+  transform: translate(1234px, 2905px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(2) {
+  transform: translate(4500px, 200px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(3) {
+  transform: translate(-2008px, 2200px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(4) {
+  transform: translate(1273px, 3235px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(5) {
+  transform: translate(1200px, 2009px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(6) {
+  transform: translate(598px, -800px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(7) {
+  transform: translate(3200px, -1945px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(8) {
+  transform: translate(-1200px, 1900px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(9) {
+  transform: translate(90px, 2800px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(10) {
+  transform: translate(-2200px, -4900px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(11) {
+  transform: translate(-3400px, 180px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(12) {
+  transform: translate(10px, -3499px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(13) {
+  transform: translate(-200px, 4500px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(14) {
+  transform: translate(-900px, 2900px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(15) {
+  transform: translate(1800px, 3700px);
+}
+.visual [data-depth="3"] .visual-box:nth-child(16) {
+  transform: translate(-4500px, 200px);
+}
+.visual .move .visual-box {
+  transition: all 2.4s cubic-bezier(0.06, 0.72, 0.41, 0.98);
+  transform: translate(0) !important;
+}
